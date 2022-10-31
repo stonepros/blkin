@@ -240,7 +240,7 @@ int blkin_record(const struct blkin_trace *trace,
 		res = -EINVAL;
 		goto OUT;
 	} 
-	TracepointProvider::initialize<tracepoint_traits>(g_ceph_context);
+	TracepointProvider::initialize<tracepoint_traits>(g_stone_context);
 	endpoint = annotation->endpoint ? nullptr : trace->endpoint;
 	if (!endpoint || !endpoint->ip || !endpoint->name) {
 		res = -EINVAL;
